@@ -51,7 +51,7 @@ Vi installerar och hanterar PostgreSQL genom Docker.
 
 ---
 
-# Få igenom en PostgreSQL databas
+# Få igång en PostgreSQL databas
 
 ## Steg 1: Starta Docker Desktop och Docker Engine
 
