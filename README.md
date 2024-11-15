@@ -321,14 +321,14 @@ AND salary >= 50000;
 
 -- Datum-beräkningar
 SELECT * FROM log_entries 
-WHERE created_at >= DATE_SUB(NOW(), INTERVAL 24 HOUR)
+WHERE created_at >= NOW() - INTERVAL '24 HOUR'
 AND severity IN ('ERROR', 'CRITICAL')
 AND message NOT LIKE '%timeout%';
 
 -- Kombinera flera villkor med parenteser
 SELECT * FROM orders 
 WHERE (status = 'completed' AND total_amount > 1000)
-OR (status = 'pending' AND created_at < DATE_SUB(NOW(), INTERVAL 7 DAY))
+OR (status = 'pending' AND created_at < NOW() - INTERVAL '7 DAY')
 ORDER BY created_at DESC;
 ```
 
